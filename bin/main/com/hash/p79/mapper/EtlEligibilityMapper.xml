@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hash.p79.mapper.EtlEligibilityMapper">
+
+<resultMap type="com.hash.p79.domain.EtlEligibility" id="EtlLEligibilityResult">
+
+    <result column="JOB_ID" jdbcType="DECIMAL" property="jobId"/>
+    <result column="REPROCESSED_JOB_ID" jdbcType="DECIMAL" property="reprocessedJobId"/>
+    <result column="ROW_NUM" jdbcType="DECIMAL" property="rowNum"/>
+    <result column="MATCH_CASE_ID" jdbcType="DECIMAL" property="matchCaseId"/>
+    <result column="MATCH_CLIENT_ID" jdbcType="DECIMAL" property="matchClientId"/>
+    <result column="NEW_CASE_ID" jdbcType="DECIMAL" property="newCaseId"/>
+    <result column="NEW_CLIENT_ID" jdbcType="DECIMAL" property="newClientId"/>
+    <result column="STATUS" jdbcType="VARCHAR" property="status"/>
+    <result column="TO_BE_PROCESSED_ROW_NUM" jdbcType="DECIMAL" property="toBeProcessedRowNum"/>
+    <result column="CLIENT_NBR" jdbcType="VARCHAR" property="clientNbr"/>
+    <result column="ALIAS_FLAG" jdbcType="VARCHAR" property="aliasFlag"/>
+    <result column="REAL_CLIENT_NBR" jdbcType="VARCHAR" property="realClientNbr"/>
+    <result column="CLIENT_NAME" jdbcType="VARCHAR" property="clientName"/>
+    <result column="SSN" jdbcType="VARCHAR" property="ssn"/>
+    <result column="SSCN" jdbcType="VARCHAR" property="sscn"/>
+    <result column="SEX" jdbcType="VARCHAR" property="sex"/>
+    <result column="RACE" jdbcType="VARCHAR" property="race"/>
+    <result column="BIRTH_DATE" jdbcType="DATE" property="birthDate"/>
+    <result column="CERTIFICATION_DATE" jdbcType="DATE" property="certificationDate"/>
+    <result column="ALIEN_DATE" jdbcType="DATE" property="alienDate"/>
+    <result column="CASE_NBR" jdbcType="VARCHAR" property="caseNbr"/>
+    <result column="EDG_NAME" jdbcType="VARCHAR" property="edgName"/>
+    <result column="TIERS_CASE_NUM" jdbcType="VARCHAR" property="tiersCaseNum"/>
+    <result column="HOH_NAME" jdbcType="VARCHAR" property="hohName"/>
+    <result column="GUARDIAN_NAME" jdbcType="VARCHAR" property="guardianName"/> 
+    <result column="PAYEE_CD" jdbcType="VARCHAR" property="payeeCd"/>
+    <result column="MAIL_ADDR_LINE_1" jdbcType="VARCHAR" property="mailAddrLine1"/>
+    <result column="MAIL_ADDR_LINE_2" jdbcType="VARCHAR" property="mailAddrLine2"/>
+    <result column="MAIL_CITY" jdbcType="VARCHAR" property="mailCity"/>
+    <result column="MAIL_STATE" jdbcType="VARCHAR" property="mailState"/>
+    <result column="MAIL_ZIP" jdbcType="VARCHAR" property="mailZip"/>
+    <result column="ZIP_PLUS_FOUR" jdbcType="VARCHAR" property="zipPlusFour"/>
+    <result column="CARRIER_CODE" jdbcType="VARCHAR" property="carrierCode"/>
+    <result column="COUNTY" jdbcType="VARCHAR" property="county"/>
+    <result column="PART_A" jdbcType="DATE" property="partA"/>
+    <result column="HOSPICE_FLAG" jdbcType="VARCHAR" property="hospiceFlag"/>
+    <result column="VENDOR_DRUG_DT_9" jdbcType="DATE" property="vendorDrugDt9"/>
+    <result column="DENTAL_DT_9" jdbcType="DATE" property="dentalDt9"/>
+    <result column="PART_A_CLOSE_DT_9" jdbcType="DATE" property="partACloseDt9"/>
+    <result column="WPHONE_NBR" jdbcType="VARCHAR" property="wphoneNbr"/>
+    <result column="HPHONE_NBR" jdbcType="VARCHAR" property="hphoneNbr"/>
+    <result column="CPHONE_NBR" jdbcType="VARCHAR" property="cphoneNbr"/>
+    <result column="EMAIL_ADDR" jdbcType="VARCHAR" property="emailAddr"/>
+    <result column="STATUS_IN_GROUP" jdbcType="VARCHAR" property="statusInGroup"/>
+    <result column="PROVIDER_INFO_OCCURS" jdbcType="DECIMAL" property="providerInfoOccurs"/>
+    <result column="PROVIDER_NUM1" jdbcType="VARCHAR" property="providerNum1"/>
+    <result column="PROVIDER_ACTIVITY_TYPE1" jdbcType="DECIMAL" property="providerActivityType1"/>
+    <result column="PROV_BEGIN_DT1" jdbcType="DATE" property="provBeginDt1"/>
+    <result column="PROV_END_DT1" jdbcType="DATE" property="provEndDt1"/>
+    <result column="PROVIDER_NUM2" jdbcType="VARCHAR" property="providerNum2"/>
+    <result column="PROVIDER_ACTIVITY_TYPE2" jdbcType="DECIMAL" property="providerActivityType2"/>
+    <result column="PROV_BEGIN_DT2" jdbcType="DATE" property="provBeginDt2"/>
+    <result column="PROV_END_DT2" jdbcType="DATE" property="provEndDt2"/>
+    <result column="PROVIDER_NUM3" jdbcType="VARCHAR" property="providerNum3"/>
+    <result column="PROVIDER_ACTIVITY_TYPE3" jdbcType="DECIMAL" property="providerActivityType3"/>
+    <result column="PROV_BEGIN_DT3" jdbcType="DATE" property="provBeginDt3"/>
+    <result column="PROV_END_DT3" jdbcType="DATE" property="provEndDt3"/>
+    <result column="PROVIDER_NUM4" jdbcType="VARCHAR" property="providerNum4"/>
+    <result column="PROVIDER_ACTIVITY_TYPE4" jdbcType="DECIMAL" property="providerActivityType4"/>
+    <result column="PROV_BEGIN_DT4" jdbcType="DATE" property="provBeginDt4"/>
+    <result column="PROV_END_DT4" jdbcType="DATE" property="provEndDt4"/>
+    <result column="PROVIDER_NUM5" jdbcType="VARCHAR" property="providerNum5"/>
+    <result column="PROVIDER_ACTIVITY_TYPE5" jdbcType="DECIMAL" property="providerActivityType5"/>
+    <result column="PROV_BEGIN_DT5" jdbcType="DATE" property="provBeginDt5"/>
+    <result column="PROV_END_DT5" jdbcType="DATE" property="provEndDt5"/>
+    <result column="PROVIDER_NUM6" jdbcType="VARCHAR" property="providerNum6"/>
+    <result column="PROVIDER_ACTIVITY_TYPE6" jdbcType="DECIMAL" property="providerActivityType6"/>
+    <result column="PROV_BEGIN_DT6" jdbcType="DATE" property="provBeginDt6"/>
+    <result column="PROV_END_DT6" jdbcType="DATE" property="provEndDt6"/>
+    <result column="PROVIDER_NUM7" jdbcType="VARCHAR" property="providerNum7"/>
+    <result column="PROVIDER_ACTIVITY_TYPE7" jdbcType="DECIMAL" property="providerActivityType7"/>
+    <result column="PROV_BEGIN_DT7" jdbcType="DATE" property="provBeginDt7"/>
+    <result column="PROV_END_DT7" jdbcType="DATE" property="provEndDt7"/>
+    <result column="PROVIDER_NUM8" jdbcType="VARCHAR" property="providerNum8"/>
+    <result column="PROVIDER_ACTIVITY_TYPE8" jdbcType="DECIMAL" property="providerActivityType8"/>
+    <result column="PROV_BEGIN_DT8" jdbcType="DATE" property="provBeginDt8"/>
+    <result column="PROV_END_DT8" jdbcType="DATE" property="provEndDt8"/>
+    <result column="PROVIDER_NUM9" jdbcType="VARCHAR" property="providerNum9"/>
+    <result column="PROVIDER_ACTIVITY_TYPE9" jdbcType="DECIMAL" property="providerActivityType9"/>
+    <result column="PROV_BEGIN_DT9" jdbcType="DATE" property="provBeginDt9"/>
+    <result column="PROV_END_DT9" jdbcType="DATE" property="provEndDt9"/>
+    <result column="PROVIDER_NUM10" jdbcType="VARCHAR" property="providerNum10"/>
+    <result column="PROVIDER_ACTIVITY_TYPE10" jdbcType="DECIMAL" property="providerActivityType10"/>
+    <result column="PROV_BEGIN_DT10" jdbcType="DATE" property="provBeginDt10"/>
+    <result column="PROV_END_DT10" jdbcType="DATE" property="provEndDt10"/>
+    <result column="MEDICARE_B_OCCURS" jdbcType="DECIMAL" property="medicareBOccurs"/>
+    <result column="MEDICARE_B_TYPE1" jdbcType="VARCHAR" property="medicareBType1"/>
+    <result column="MEDICARE_B_FROM1" jdbcType="DATE" property="medicareBFrom1"/>
+    <result column="MEDICARE_B_TO1" jdbcType="DATE" property="medicareBTo1"/>
+    <result column="MEDICARE_B_TYPE2" jdbcType="VARCHAR" property="medicareBType2"/>
+    <result column="MEDICARE_B_FROM2" jdbcType="DATE" property="medicareBFrom2"/>
+    <result column="MEDICARE_B_TO2" jdbcType="DATE" property="medicareBTo2"/>
+    <result column="MEDICARE_B_TYPE3" jdbcType="VARCHAR" property="medicareBType3"/>
+    <result column="MEDICARE_B_FROM3" jdbcType="DATE" property="medicareBFrom3"/>
+    <result column="MEDICARE_B_TO3" jdbcType="DATE" property="medicareBTo3"/>
+    <result column="MEDICARE_B_TYPE4" jdbcType="VARCHAR" property="medicareBType4"/>
+    <result column="MEDICARE_B_FROM4" jdbcType="DATE" property="medicareBFrom4"/>
+    <result column="MEDICARE_B_TO4" jdbcType="DATE" property="medicareBTo4"/>
+    <result column="MEDICARE_B_TYPE5" jdbcType="VARCHAR" property="medicareBType5"/>
+    <result column="MEDICARE_B_FROM5" jdbcType="DATE" property="medicareBFrom5"/>
+    <result column="MEDICARE_B_TO5" jdbcType="DATE" property="medicareBTo5"/>
+    <result column="MEDICARE_FROM" jdbcType="DATE" property="medicareFrom"/>
+    <result column="MEDICARE_THRU" jdbcType="DATE" property="medicareThru"/>
+    <result column="PA_REVIEW_DT" jdbcType="DATE" property="paReviewDt"/>
+    <result column="PA_PACKET_REC_DT" jdbcType="DATE" property="paPacketRecDt"/>
+    <result column="PA_PARENT_NBR" jdbcType="VARCHAR" property="paParentNbr"/>
+    <result column="LANG" jdbcType="VARCHAR" property="lang"/>
+    <result column="EXPECT_DELIVER_DT" jdbcType="DATE" property="expectDeliverDt"/>
+    <result column="RES_ADDR_LINE_1" jdbcType="VARCHAR" property="resAddrLine1"/>
+    <result column="RES_ADDR_LINE_2" jdbcType="VARCHAR" property="resAddrLine2"/>
+    <result column="RES_CITY" jdbcType="VARCHAR" property="resCity"/>
+    <result column="RES_STATE" jdbcType="VARCHAR" property="resState"/>
+    <result column="RES_ZIP" jdbcType="VARCHAR" property="resZip"/>
+    <result column="RES_ZIPFOUR" jdbcType="VARCHAR" property="resZipfour"/>
+    <result column="CAND_PROG_OCCURS" jdbcType="DECIMAL" property="candProgOccurs"/>
+    <result column="CAND_CANDIDATE_FLAG1" jdbcType="VARCHAR" property="candCandidateFlag1"/>
+    <result column="CAND_PROGRAM1" jdbcType="VARCHAR" property="candProgram1"/>
+    <result column="CAND_COUNTY1" jdbcType="VARCHAR" property="candCounty1"/>
+    <result column="CAND_COORD_FROM1" jdbcType="DATE" property="candCoordFrom1"/>
+    <result column="CAND_COORD_TO1" jdbcType="DATE" property="candCoordTo1"/>
+    <result column="CAND_STATUS_CODE1" jdbcType="VARCHAR" property="candStatusCode1"/>
+    <result column="CAND_WAIVER_TOA1" jdbcType="VARCHAR" property="candWaiverToa1"/>
+    <result column="CAND_HC_WAIVER_TOA1" jdbcType="VARCHAR" property="candHcWaiverToa1"/>
+    <result column="CAND_CANDIDATE_FLAG2" jdbcType="VARCHAR" property="candCandidateFlag2"/>
+    <result column="CAND_PROGRAM2" jdbcType="VARCHAR" property="candProgram2"/>
+    <result column="CAND_COUNTY2" jdbcType="VARCHAR" property="candCounty2"/>
+    <result column="CAND_COORD_FROM2" jdbcType="DATE" property="candCoordFrom2"/>
+    <result column="CAND_COORD_TO2" jdbcType="DATE" property="candCoordTo2"/>
+    <result column="CAND_STATUS_CODE2" jdbcType="VARCHAR" property="candStatusCode2"/>
+    <result column="CAND_WAIVER_TOA2" jdbcType="VARCHAR" property="candWaiverToa2"/>
+    <result column="CAND_HC_WAIVER_TOA2" jdbcType="VARCHAR" property="candHcWaiverToa2"/>
+    <result column="COORD_OCCURS" jdbcType="DECIMAL" property="coordOccurs"/>
+    <result column="COORD_PROGRAM1" jdbcType="VARCHAR" property="coordProgram1"/>
+    <result column="COORD_CONTRACTOR1" jdbcType="VARCHAR" property="coordContractor1"/>
+    <result column="COORD_COUNTY1" jdbcType="VARCHAR" property="coordCounty1"/>
+    <result column="COORD_PLAN1" jdbcType="VARCHAR" property="coordPlan1"/>
+    <result column="COORD_FROM1" jdbcType="DATE" property="coordFrom1"/>
+    <result column="COORD_TO1" jdbcType="DATE" property="coordTo1"/>
+    <result column="COORD_STATUS_CODE1" jdbcType="VARCHAR" property="coordStatusCode1"/>
+    <result column="COORD_VOLUNTARY_SW1" jdbcType="VARCHAR" property="coordVoluntarySw1"/>
+    <result column="COORD_WAIVER_TOA1" jdbcType="VARCHAR" property="coordWaiverToa1"/>
+    <result column="COORD_HC_WAIVER_TOA1" jdbcType="VARCHAR" property="coordHcWaiverToa1"/>
+    <result column="COORD_PROGRAM2" jdbcType="VARCHAR" property="coordProgram2"/>
+    <result column="COORD_CONTRACTOR2" jdbcType="VARCHAR" property="coordContractor2"/>
+    <result column="COORD_COUNTY2" jdbcType="VARCHAR" property="coordCounty2"/>
+    <result column="COORD_PLAN2" jdbcType="VARCHAR" property="coordPlan2"/>
+    <result column="COORD_FROM2" jdbcType="DATE" property="coordFrom2"/>
+    <result column="COORD_TO2" jdbcType="DATE" property="coordTo2"/>
+    <result column="COORD_STATUS_CODE2" jdbcType="VARCHAR" property="coordStatusCode2"/>
+    <result column="COORD_VOLUNTARY_SW2" jdbcType="VARCHAR" property="coordVoluntarySw2"/>
+    <result column="COORD_WAIVER_TOA2" jdbcType="VARCHAR" property="coordWaiverToa2"/>
+    <result column="COORD_HC_WAIVER_TOA2" jdbcType="VARCHAR" property="coordHcWaiverToa2"/>
+    <result column="COORD_PROGRAM3" jdbcType="VARCHAR" property="coordProgram3"/>
+    <result column="COORD_CONTRACTOR3" jdbcType="VARCHAR" property="coordContractor3"/>
+    <result column="COORD_COUNTY3" jdbcType="VARCHAR" property="coordCounty3"/>
+    <result column="COORD_PLAN3" jdbcType="VARCHAR" property="coordPlan3"/>
+    <result column="COORD_FROM3" jdbcType="DATE" property="coordFrom3"/>
+    <result column="COORD_TO3" jdbcType="DATE" property="coordTo3"/>
+    <result column="COORD_STATUS_CODE3" jdbcType="VARCHAR" property="coordStatusCode3"/>
+    <result column="COORD_VOLUNTARY_SW3" jdbcType="VARCHAR" property="coordVoluntarySw3"/>
+    <result column="COORD_WAIVER_TOA3" jdbcType="VARCHAR" property="coordWaiverToa3"/>
+    <result column="COORD_HC_WAIVER_TOA3" jdbcType="VARCHAR" property="coordHcWaiverToa3"/>
+    <result column="COORD_PROGRAM4" jdbcType="VARCHAR" property="coordProgram4"/>
+    <result column="COORD_CONTRACTOR4" jdbcType="VARCHAR" property="coordContractor4"/>
+    <result column="COORD_COUNTY4" jdbcType="VARCHAR" property="coordCounty4"/>
+    <result column="COORD_PLAN4" jdbcType="VARCHAR" property="coordPlan4"/>
+    <result column="COORD_FROM4" jdbcType="DATE" property="coordFrom4"/>
+    <result column="COORD_TO4" jdbcType="DATE" property="coordTo4"/>
+    <result column="COORD_STATUS_CODE4" jdbcType="VARCHAR" property="coordStatusCode4"/>
+    <result column="COORD_VOLUNTARY_SW4" jdbcType="VARCHAR" property="coordVoluntarySw4"/>
+    <result column="COORD_WAIVER_TOA4" jdbcType="VARCHAR" property="coordWaiverToa4"/>
+    <result column="COORD_HC_WAIVER_TOA4" jdbcType="VARCHAR" property="coordHcWaiverToa4"/>
+    <result column="COORD_PROGRAM5" jdbcType="VARCHAR" property="coordProgram5"/>
+    <result column="COORD_CONTRACTOR5" jdbcType="VARCHAR" property="coordContractor5"/>
+    <result column="COORD_COUNTY5" jdbcType="VARCHAR" property="coordCounty5"/>
+    <result column="COORD_PLAN5" jdbcType="VARCHAR" property="coordPlan5"/>
+    <result column="COORD_FROM5" jdbcType="DATE" property="coordFrom5"/>
+    <result column="COORD_TO5" jdbcType="DATE" property="coordTo5"/>
+    <result column="COORD_STATUS_CODE5" jdbcType="VARCHAR" property="coordStatusCode5"/>
+    <result column="COORD_VOLUNTARY_SW5" jdbcType="VARCHAR" property="coordVoluntarySw5"/>
+    <result column="COORD_WAIVER_TOA5" jdbcType="VARCHAR" property="coordWaiverToa5"/>
+    <result column="COORD_HC_WAIVER_TOA5" jdbcType="VARCHAR" property="coordHcWaiverToa5"/>
+    <result column="COORD_PROGRAM6" jdbcType="VARCHAR" property="coordProgram6"/>
+    <result column="COORD_CONTRACTOR6" jdbcType="VARCHAR" property="coordContractor6"/>
+    <result column="COORD_COUNTY6" jdbcType="VARCHAR" property="coordCounty6"/>
+    <result column="COORD_PLAN6" jdbcType="VARCHAR" property="coordPlan6"/>
+    <result column="COORD_FROM6" jdbcType="DATE" property="coordFrom6"/>
+    <result column="COORD_TO6" jdbcType="DATE" property="coordTo6"/>
+    <result column="COORD_STATUS_CODE6" jdbcType="VARCHAR" property="coordStatusCode6"/>
+    <result column="COORD_VOLUNTARY_SW6" jdbcType="VARCHAR" property="coordVoluntarySw6"/>
+    <result column="COORD_WAIVER_TOA6" jdbcType="VARCHAR" property="coordWaiverToa6"/>
+    <result column="COORD_HC_WAIVER_TOA6" jdbcType="VARCHAR" property="coordHcWaiverToa6"/>
+    <result column="COORD_PROGRAM7" jdbcType="VARCHAR" property="coordProgram7"/>
+    <result column="COORD_CONTRACTOR7" jdbcType="VARCHAR" property="coordContractor7"/>
+    <result column="COORD_COUNTY7" jdbcType="VARCHAR" property="coordCounty7"/>
+    <result column="COORD_PLAN7" jdbcType="VARCHAR" property="coordPlan7"/>
+    <result column="COORD_FROM7" jdbcType="DATE" property="coordFrom7"/>
+    <result column="COORD_TO7" jdbcType="DATE" property="coordTo7"/>
+    <result column="COORD_STATUS_CODE7" jdbcType="VARCHAR" property="coordStatusCode7"/>
+    <result column="COORD_VOLUNTARY_SW7" jdbcType="VARCHAR" property="coordVoluntarySw7"/>
+    <result column="COORD_WAIVER_TOA7" jdbcType="VARCHAR" property="coordWaiverToa7"/>
+    <result column="COORD_HC_WAIVER_TOA7" jdbcType="VARCHAR" property="coordHcWaiverToa7"/>
+    <result column="COORD_PROGRAM8" jdbcType="VARCHAR" property="coordProgram8"/>
+    <result column="COORD_CONTRACTOR8" jdbcType="VARCHAR" property="coordContractor8"/>
+    <result column="COORD_COUNTY8" jdbcType="VARCHAR" property="coordCounty8"/>
+    <result column="COORD_PLAN8" jdbcType="VARCHAR" property="coordPlan8"/>
+    <result column="COORD_FROM8" jdbcType="DATE" property="coordFrom8"/>
+    <result column="COORD_TO8" jdbcType="DATE" property="coordTo8"/>
+    <result column="COORD_STATUS_CODE8" jdbcType="VARCHAR" property="coordStatusCode8"/>
+    <result column="COORD_VOLUNTARY_SW8" jdbcType="VARCHAR" property="coordVoluntarySw8"/>
+    <result column="COORD_WAIVER_TOA8" jdbcType="VARCHAR" property="coordWaiverToa8"/>
+    <result column="COORD_HC_WAIVER_TOA8" jdbcType="VARCHAR" property="coordHcWaiverToa8"/>
+    <result column="COORD_PROGRAM9" jdbcType="VARCHAR" property="coordProgram9"/>
+    <result column="COORD_CONTRACTOR9" jdbcType="VARCHAR" property="coordContractor9"/>
+    <result column="COORD_COUNTY9" jdbcType="VARCHAR" property="coordCounty9"/>
+    <result column="COORD_PLAN9" jdbcType="VARCHAR" property="coordPlan9"/>
+    <result column="COORD_FROM9" jdbcType="DATE" property="coordFrom9"/>
+    <result column="COORD_TO9" jdbcType="DATE" property="coordTo9"/>
+    <result column="COORD_STATUS_CODE9" jdbcType="VARCHAR" property="coordStatusCode9"/>
+    <result column="COORD_VOLUNTARY_SW9" jdbcType="VARCHAR" property="coordVoluntarySw9"/>
+    <result column="COORD_WAIVER_TOA9" jdbcType="VARCHAR" property="coordWaiverToa9"/>
+    <result column="COORD_HC_WAIVER_TOA9" jdbcType="VARCHAR" property="coordHcWaiverToa9"/>
+    <result column="COORD_PROGRAM10" jdbcType="VARCHAR" property="coordProgram10"/>
+    <result column="COORD_CONTRACTOR10" jdbcType="VARCHAR" property="coordContractor10"/>
+    <result column="COORD_COUNTY10" jdbcType="VARCHAR" property="coordCounty10"/>
+    <result column="COORD_PLAN10" jdbcType="VARCHAR" property="coordPlan10"/>
+    <result column="COORD_FROM10" jdbcType="DATE" property="coordFrom10"/>
+    <result column="COORD_TO10" jdbcType="DATE" property="coordTo10"/>
+    <result column="COORD_STATUS_CODE10" jdbcType="VARCHAR" property="coordStatusCode10"/>
+    <result column="COORD_VOLUNTARY_SW10" jdbcType="VARCHAR" property="coordVoluntarySw10"/>
+    <result column="COORD_WAIVER_TOA10" jdbcType="VARCHAR" property="coordWaiverToa10"/>
+    <result column="COORD_HC_WAIVER_TOA10" jdbcType="VARCHAR" property="coordHcWaiverToa10"/>
+    <result column="COORD_PROGRAM11" jdbcType="VARCHAR" property="coordProgram11"/>
+    <result column="COORD_CONTRACTOR11" jdbcType="VARCHAR" property="coordContractor11"/>
+    <result column="COORD_COUNTY11" jdbcType="VARCHAR" property="coordCounty11"/>
+    <result column="COORD_PLAN11" jdbcType="VARCHAR" property="coordPlan11"/>
+    <result column="COORD_FROM11" jdbcType="DATE" property="coordFrom11"/>
+    <result column="COORD_TO11" jdbcType="DATE" property="coordTo11"/>
+    <result column="COORD_STATUS_CODE11" jdbcType="VARCHAR" property="coordStatusCode11"/>
+    <result column="COORD_VOLUNTARY_SW11" jdbcType="VARCHAR" property="coordVoluntarySw11"/>
+    <result column="COORD_WAIVER_TOA11" jdbcType="VARCHAR" property="coordWaiverToa11"/>
+    <result column="COORD_HC_WAIVER_TOA11" jdbcType="VARCHAR" property="coordHcWaiverToa11"/>
+    <result column="COORD_PROGRAM12" jdbcType="VARCHAR" property="coordProgram12"/>
+    <result column="COORD_CONTRACTOR12" jdbcType="VARCHAR" property="coordContractor12"/>
+    <result column="COORD_COUNTY12" jdbcType="VARCHAR" property="coordCounty12"/>
+    <result column="COORD_PLAN12" jdbcType="VARCHAR" property="coordPlan12"/>
+    <result column="COORD_FROM12" jdbcType="DATE" property="coordFrom12"/>
+    <result column="COORD_TO12" jdbcType="DATE" property="coordTo12"/>
+    <result column="COORD_STATUS_CODE12" jdbcType="VARCHAR" property="coordStatusCode12"/>
+    <result column="COORD_VOLUNTARY_SW12" jdbcType="VARCHAR" property="coordVoluntarySw12"/>
+    <result column="COORD_WAIVER_TOA12" jdbcType="VARCHAR" property="coordWaiverToa12"/>
+    <result column="COORD_HC_WAIVER_TOA12" jdbcType="VARCHAR" property="coordHcWaiverToa12"/>
+    <result column="MED_OCCURS" jdbcType="DECIMAL" property="medOccurs"/>
+    <result column="MED_CATEGORY1" jdbcType="VARCHAR" property="medCategory1"/>
+    <result column="MED_COVERAGE_CODE1" jdbcType="VARCHAR" property="medCoverageCode1"/>
+    <result column="MED_TYPE_PROGRAM1" jdbcType="VARCHAR" property="medTypeProgram1"/>
+    <result column="MED_TIERS_TOA1" jdbcType="VARCHAR" property="medTiersToa1"/>
+    <result column="MED_BP1" jdbcType="VARCHAR" property="medBp1"/>
+    <result column="MED_FROM_DATE1" jdbcType="DATE" property="medFromDate1"/>
+    <result column="MED_THRU_DATE1" jdbcType="DATE" property="medThruDate1"/>
+    <result column="MED_SPEND_DOWN1" jdbcType="VARCHAR" property="medSpendDown1"/>
+    <result column="MED_SUPPRESSED_SSI1" jdbcType="VARCHAR" property="medSuppressedSSI1"/>
+    <result column="MED_CATEGORY2" jdbcType="VARCHAR" property="medCategory2"/>
+    <result column="MED_COVERAGE_CODE2" jdbcType="VARCHAR" property="medCoverageCode2"/>
+    <result column="MED_TYPE_PROGRAM2" jdbcType="VARCHAR" property="medTypeProgram2"/>
+    <result column="MED_TIERS_TOA2" jdbcType="VARCHAR" property="medTiersToa2"/>
+    <result column="MED_BP2" jdbcType="VARCHAR" property="medBp2"/>
+    <result column="MED_FROM_DATE2" jdbcType="DATE" property="medFromDate2"/>
+    <result column="MED_THRU_DATE2" jdbcType="DATE" property="medThruDate2"/>
+    <result column="MED_SPEND_DOWN2" jdbcType="VARCHAR" property="medSpendDown2"/>
+    <result column="MED_SUPPRESSED_SSI2" jdbcType="VARCHAR" property="medSuppressedSSI2"/>
+    <result column="MED_CATEGORY3" jdbcType="VARCHAR" property="medCategory3"/>
+    <result column="MED_COVERAGE_CODE3" jdbcType="VARCHAR" property="medCoverageCode3"/>
+    <result column="MED_TYPE_PROGRAM3" jdbcType="VARCHAR" property="medTypeProgram3"/>
+    <result column="MED_TIERS_TOA3" jdbcType="VARCHAR" property="medTiersToa3"/>
+    <result column="MED_BP3" jdbcType="VARCHAR" property="medBp3"/>
+    <result column="MED_FROM_DATE3" jdbcType="DATE" property="medFromDate3"/>
+    <result column="MED_THRU_DATE3" jdbcType="DATE" property="medThruDate3"/>
+    <result column="MED_SPEND_DOWN3" jdbcType="VARCHAR" property="medSpendDown3"/>
+    <result column="MED_SUPPRESSED_SSI3" jdbcType="VARCHAR" property="medSuppressedSSI3"/>
+    <result column="MED_CATEGORY4" jdbcType="VARCHAR" property="medCategory4"/>
+    <result column="MED_COVERAGE_CODE4" jdbcType="VARCHAR" property="medCoverageCode4"/>
+    <result column="MED_TYPE_PROGRAM4" jdbcType="VARCHAR" property="medTypeProgram4"/>
+    <result column="MED_TIERS_TOA4" jdbcType="VARCHAR" property="medTiersToa4"/>
+    <result column="MED_BP4" jdbcType="VARCHAR" property="medBp4"/>
+    <result column="MED_FROM_DATE4" jdbcType="DATE" property="medFromDate4"/>
+    <result column="MED_THRU_DATE4" jdbcType="DATE" property="medThruDate4"/>
+    <result column="MED_SPEND_DOWN4" jdbcType="VARCHAR" property="medSpendDown4"/>
+    <result column="MED_SUPPRESSED_SSI4" jdbcType="VARCHAR" property="medSuppressedSSI4"/>
+    <result column="MED_CATEGORY5" jdbcType="VARCHAR" property="medCategory5"/>
+    <result column="MED_COVERAGE_CODE5" jdbcType="VARCHAR" property="medCoverageCode5"/>
+    <result column="MED_TYPE_PROGRAM5" jdbcType="VARCHAR" property="medTypeProgram5"/>
+    <result column="MED_TIERS_TOA5" jdbcType="VARCHAR" property="medTiersToa5"/>
+    <result column="MED_BP5" jdbcType="VARCHAR" property="medBp5"/>
+    <result column="MED_FROM_DATE5" jdbcType="DATE" property="medFromDate5"/>
+    <result column="MED_THRU_DATE5" jdbcType="DATE" property="medThruDate5"/>
+    <result column="MED_SPEND_DOWN5" jdbcType="VARCHAR" property="medSpendDown5"/>
+    <result column="MED_SUPPRESSED_SSI5" jdbcType="VARCHAR" property="medSuppressedSSI5"/>
+    <result column="MED_CATEGORY6" jdbcType="VARCHAR" property="medCategory6"/>
+    <result column="MED_COVERAGE_CODE6" jdbcType="VARCHAR" property="medCoverageCode6"/>
+    <result column="MED_TYPE_PROGRAM6" jdbcType="VARCHAR" property="medTypeProgram6"/>
+    <result column="MED_TIERS_TOA6" jdbcType="VARCHAR" property="medTiersToa6"/>
+    <result column="MED_BP6" jdbcType="VARCHAR" property="medBp6"/>
+    <result column="MED_FROM_DATE6" jdbcType="DATE" property="medFromDate6"/>
+    <result column="MED_THRU_DATE6" jdbcType="DATE" property="medThruDate6"/>
+    <result column="MED_SPEND_DOWN6" jdbcType="VARCHAR" property="medSpendDown6"/>
+    <result column="MED_SUPPRESSED_SSI6" jdbcType="VARCHAR" property="medSuppressedSSI6"/>
+    <result column="MED_CATEGORY7" jdbcType="VARCHAR" property="medCategory7"/>
+    <result column="MED_COVERAGE_CODE7" jdbcType="VARCHAR" property="medCoverageCode7"/>
+    <result column="MED_TYPE_PROGRAM7" jdbcType="VARCHAR" property="medTypeProgram7"/>
+    <result column="MED_TIERS_TOA7" jdbcType="VARCHAR" property="medTiersToa7"/>
+    <result column="MED_BP7" jdbcType="VARCHAR" property="medBp7"/>
+    <result column="MED_FROM_DATE7" jdbcType="DATE" property="medFromDate7"/>
+    <result column="MED_THRU_DATE7" jdbcType="DATE" property="medThruDate7"/>
+    <result column="MED_SPEND_DOWN7" jdbcType="VARCHAR" property="medSpendDown7"/>
+    <result column="MED_SUPPRESSED_SSI7" jdbcType="VARCHAR" property="medSuppressedSSI7"/>
+    <result column="MED_CATEGORY8" jdbcType="VARCHAR" property="medCategory8"/>
+    <result column="MED_COVERAGE_CODE8" jdbcType="VARCHAR" property="medCoverageCode8"/>
+    <result column="MED_TYPE_PROGRAM8" jdbcType="VARCHAR" property="medTypeProgram8"/>
+    <result column="MED_TIERS_TOA8" jdbcType="VARCHAR" property="medTiersToa8"/>
+    <result column="MED_BP8" jdbcType="VARCHAR" property="medBp8"/>
+    <result column="MED_FROM_DATE8" jdbcType="DATE" property="medFromDate8"/>
+    <result column="MED_THRU_DATE8" jdbcType="DATE" property="medThruDate8"/>
+    <result column="MED_SPEND_DOWN8" jdbcType="VARCHAR" property="medSpendDown8"/>
+    <result column="MED_SUPPRESSED_SSI8" jdbcType="VARCHAR" property="medSuppressedSSI8"/>
+    <result column="MED_CATEGORY9" jdbcType="VARCHAR" property="medCategory9"/>
+    <result column="MED_COVERAGE_CODE9" jdbcType="VARCHAR" property="medCoverageCode9"/>
+    <result column="MED_TYPE_PROGRAM9" jdbcType="VARCHAR" property="medTypeProgram9"/>
+    <result column="MED_TIERS_TOA9" jdbcType="VARCHAR" property="medTiersToa9"/>
+    <result column="MED_BP9" jdbcType="VARCHAR" property="medBp9"/>
+    <result column="MED_FROM_DATE9" jdbcType="DATE" property="medFromDate9"/>
+    <result column="MED_THRU_DATE9" jdbcType="DATE" property="medThruDate9"/>
+    <result column="MED_SPEND_DOWN9" jdbcType="VARCHAR" property="medSpendDown9"/>
+    <result column="MED_SUPPRESSED_SSI9" jdbcType="VARCHAR" property="medSuppressedSSI9"/>
+    <result column="MED_CATEGORY10" jdbcType="VARCHAR" property="medCategory10"/>
+    <result column="MED_COVERAGE_CODE10" jdbcType="VARCHAR" property="medCoverageCode10"/>
+    <result column="MED_TYPE_PROGRAM10" jdbcType="VARCHAR" property="medTypeProgram10"/>
+    <result column="MED_TIERS_TOA10" jdbcType="VARCHAR" property="medTiersToa10"/>
+    <result column="MED_BP10" jdbcType="VARCHAR" property="medBp10"/>
+    <result column="MED_FROM_DATE10" jdbcType="DATE" property="medFromDate10"/>
+    <result column="MED_THRU_DATE10" jdbcType="DATE" property="medThruDate10"/>
+    <result column="MED_SPEND_DOWN10" jdbcType="VARCHAR" property="medSpendDown10"/>
+    <result column="MED_SUPPRESSED_SSI10" jdbcType="VARCHAR" property="medSuppressedSSI10"/>
+    <result column="MED_CATEGORY11" jdbcType="VARCHAR" property="medCategory11"/>
+    <result column="MED_COVERAGE_CODE11" jdbcType="VARCHAR" property="medCoverageCode11"/>
+    <result column="MED_TYPE_PROGRAM11" jdbcType="VARCHAR" property="medTypeProgram11"/>
+    <result column="MED_TIERS_TOA11" jdbcType="VARCHAR" property="medTiersToa11"/>
+    <result column="MED_BP11" jdbcType="VARCHAR" property="medBp11"/>
+    <result column="MED_FROM_DATE11" jdbcType="DATE" property="medFromDate11"/>
+    <result column="MED_THRU_DATE11" jdbcType="DATE" property="medThruDate11"/>
+    <result column="MED_SPEND_DOWN11" jdbcType="VARCHAR" property="medSpendDown11"/>
+    <result column="MED_SUPPRESSED_SSI11" jdbcType="VARCHAR" property="medSuppressedSSI11"/>
+    <result column="MED_CATEGORY12" jdbcType="VARCHAR" property="medCategory12"/>
+    <result column="MED_COVERAGE_CODE12" jdbcType="VARCHAR" property="medCoverageCode12"/>
+    <result column="MED_TYPE_PROGRAM12" jdbcType="VARCHAR" property="medTypeProgram12"/>
+    <result column="MED_TIERS_TOA12" jdbcType="VARCHAR" property="medTiersToa12"/>
+    <result column="MED_BP12" jdbcType="VARCHAR" property="medBp12"/>
+    <result column="MED_FROM_DATE12" jdbcType="DATE" property="medFromDate12"/>
+    <result column="MED_THRU_DATE12" jdbcType="DATE" property="medThruDate12"/>
+    <result column="MED_SPEND_DOWN12" jdbcType="VARCHAR" property="medSpendDown12"/>
+    <result column="MED_SUPPRESSED_SSI12" jdbcType="VARCHAR" property="medSuppressedSSI12"/>
+    <result column="MT_DEATH_DT" jdbcType="DATE" property="mtDeathDt"/>
+    <result column="MT_SCREEN_DT" jdbcType="DATE" property="mtScreenDt"/>
+    <result column="CLIENTS_RELATION_TO_HOH" jdbcType="VARCHAR" property="clientsRelationToHoh"/>
+    <result column="FILENAME" jdbcType="VARCHAR" property="filename"/>
+    <result column="FILEPREFIX" jdbcType="VARCHAR" property="fileprefix"/>
+    <result column="RECORDCONTENT" jdbcType="VARCHAR" property="recordcontent"/>
+    <result column="RECORDCONTENT_HASH" jdbcType="DECIMAL" property="recordcontentHash"/>
+    <result column="STAGE2_FLAG" jdbcType="DECIMAL" property="stage2Flag"/>
+    <result column="DEMOGRAPHIC_HASH" jdbcType="VARCHAR" property="demographicHash"/>
+    <result column="DEMOGRAPHIC_CHANGE_IND" jdbcType="VARCHAR" property="demographicChangeInd"/>
+    <result column="ELIGIBILITY_HASH" jdbcType="VARCHAR" property="eligibilityHash"/>
+    <result column="ELIGIBILITY_CHANGE_IND" jdbcType="VARCHAR" property="eligibilityChangeInd"/>
+    <result column="ENROLLMENT_HASH" jdbcType="VARCHAR" property="enrollmentHash"/>
+    <result column="ENROLLMENT_CHANGE_IND" jdbcType="VARCHAR" property="enrollmentChangeInd"/>
+    <result column="PROCESS_TS" jdbcType="DATE" property="processTs"/>
+    <result column="ERROR_TEXT" jdbcType="VARCHAR" property="errorText"/>
+    <result column="MBI" jdbcType="VARCHAR" property="mbi"/>
+    <result column="FUTURE_CAND_OCCURS" jdbcType="DECIMAL" property="futureCandOccurs"/>
+	<result column="FUTURE_CAND_CANDIDATE_FLAG1" jdbcType="VARCHAR" property="futureCandCandidateFlag1"/>
+	<result column="FUTURE_CAND_PROGRAM1" jdbcType="VARCHAR" property="futureCandProgram1"/>
+	<result column="FUTURE_CAND_COUNTY1" jdbcType="VARCHAR" property="futureCandCounty1"/>
+	<result column="FUTURE_CAND_COORD_FROM1" jdbcType="DATE" property="futureCandCoordFrom1"/>		
+	<result column="FUTURE_CAND_COORD_TO1" jdbcType="DATE" property="futureCandCoordTo1"/>
+	<result column="FUTURE_CAND_STATUS_CODE1" jdbcType="VARCHAR" property="futureCandStatusCode1"/>
+	<result column="FUTURE_CAND_WAIVER_TOA1" jdbcType="VARCHAR" property="futureCandWaiverToa1"/>		
+	<result column="FUTURE_CAND_HC_WAIVER_TOA1" jdbcType="VARCHAR" property="futureCandHcWaiverToa1"/>
+	<result column="FUTURE_CAND_CANDIDATE_FLAG2" jdbcType="VARCHAR" property="futureCandCandidateFlag2"/>
+	<result column="FUTURE_CAND_PROGRAM2" jdbcType="VARCHAR" property="futureCandProgram2"/>
+	<result column="FUTURE_CAND_COUNTY2" jdbcType="VARCHAR" property="futureCandCounty2"/>
+	<result column="FUTURE_CAND_COORD_FROM2" jdbcType="DATE" property="futureCandCoordFrom2"/>	
+	<result column="FUTURE_CAND_COORD_TO2" jdbcType="DATE" property="futureCandCoordTo2"/>
+	<result column="FUTURE_CAND_STATUS_CODE2" jdbcType="VARCHAR" property="futureCandStatusCode2"/>	
+	<result column="FUTURE_CAND_WAIVER_TOA2" jdbcType="VARCHAR" property="futureCandWaiverToa2"/>		
+	<result column="FUTURE_CAND_HC_WAIVER_TOA2" jdbcType="VARCHAR" property="futureCandHcWaiverToa2"/>
+	
+	<result column="CLIENT_PREFIX_NAME" jdbcType="VARCHAR" property="clientPrefixName"/> 
+    <result column="CLIENT_FIRST_NAME" jdbcType="VARCHAR" property="clientFirstName"/> 
+    <result column="CLIENT_MID_NAME" jdbcType="VARCHAR" property="clientMidName"/> 
+    <result column="CLIENT_LAST_NAME" jdbcType="VARCHAR" property="clientLastName"/> 
+    <result column="CLIENT_SUFX_NAME" jdbcType="VARCHAR" property="clientSufxName"/> 
+    
+    <result column="EDG_PREFIX_NAME" jdbcType="VARCHAR" property="edgPrefixName"/> 
+    <result column="EDG_FIRST_NAME" jdbcType="VARCHAR" property="edgFirstName"/> 
+    <result column="EDG_MID_NAME" jdbcType="VARCHAR" property="edgMidName"/> 
+    <result column="EDG_LAST_NAME" jdbcType="VARCHAR" property="edgLastName"/> 
+    <result column="EDG_SUFX_NAME" jdbcType="VARCHAR" property="edgSufxName"/> 
+    
+    <result column="HOH_PREFIX_NAME" jdbcType="VARCHAR" property="hohPrefixName"/> 
+    <result column="HOH_FIRST_NAME" jdbcType="VARCHAR" property="hohFirstName"/> 
+    <result column="HOH_MID_NAME" jdbcType="VARCHAR" property="hohMidName"/> 
+    <result column="HOH_LAST_NAME" jdbcType="VARCHAR" property="hohLastName"/> 
+    <result column="HOH_SUFX_NAME" jdbcType="VARCHAR" property="hohSufxName"/> 
+    
+    <result column="GUARDIAN_PREFIX_NAME" jdbcType="VARCHAR" property="guardianPrefixName"/> 
+    <result column="GUARDIAN_FIRST_NAME" jdbcType="VARCHAR" property="guardianFirstName"/> 
+    <result column="GUARDIAN_MID_NAME" jdbcType="VARCHAR" property="guardianMidName"/> 
+    <result column="GUARDIAN_LAST_NAME" jdbcType="VARCHAR" property="guardianLastName"/> 
+    <result column="GUARDIAN_SUFX_NAME" jdbcType="VARCHAR" property="guardianSufxName"/> 
+    
+    <result column="MAIL_ADDR_ST_NUM" jdbcType="VARCHAR" property="mailAddrStNum"/> 
+    <result column="MAIL_ADDR_ST_NUM_FRAC" jdbcType="VARCHAR" property="mailAddrStNumFrac"/> 
+    <result column="MAIL_ADDR_ST_DIR" jdbcType="VARCHAR" property="mailAddrStDir"/> 
+    <result column="MAIL_ADDR_ST_NAME" jdbcType="VARCHAR" property="mailAddrStName"/> 
+    <result column="MAIL_ADDR_ST_TYPE" jdbcType="VARCHAR" property="mailAddrStType"/> 
+    <result column="MAIL_ADDR_DWELLING_TYPE_CD" jdbcType="VARCHAR" property="mailAddrDwellingTypeCd"/> 
+    <result column="MAIL_ADDR_APT_NUM" jdbcType="VARCHAR" property="mailAddrAptNum"/> 
+    <result column="MAIL_ADDR_LINE" jdbcType="VARCHAR" property="mailAddrLine"/> 
+    
+    <result column="RES_ADDR_ST_NUM" jdbcType="VARCHAR" property="resAddrStNum"/>	
+    <result column="RES_ADDR_ST_NUM_FRAC" jdbcType="VARCHAR" property="resAddrStNumFrac"/> 
+    <result column="RES_ADDR_ST_DIR" jdbcType="VARCHAR" property="resAddrStDir"/> 
+    <result column="RES_ADDR_ST_NAME" jdbcType="VARCHAR" property="resAddrStName"/> 
+    <result column="RES_ADDR_ST_TYPE" jdbcType="VARCHAR" property="resAddrtType"/> 
+    <result column="RES_ADDR_DWELLING_TYPE_CD" jdbcType="VARCHAR" property="resAddrDwellingTypeCd"/> 
+    <result column="RES_ADDR_APT_NUM" jdbcType="VARCHAR" property="resAddrAptNum"/> 
+    <result column="RES_ADDR_LINE" jdbcType="VARCHAR" property="resAddrLine"/> 	    
+
+    <result column="FIRST_PREG" property="firstPreg" jdbcType="VARCHAR" />
+	<result column="PREF_LANG" property="prefLang" jdbcType="VARCHAR" />
+	<result column="PHONE_PRIORITY" property="phonePriority" jdbcType="VARCHAR" />
+	<result column="PHONE_PREF" property="phonePref" jdbcType="VARCHAR" />
+	<result column="TEXT_PRIORITY" property="textPriority" jdbcType="VARCHAR" />
+	<result column="TEXT_PHONE_PREF" property="textPhonePref" jdbcType="VARCHAR" />
+	<result column="EMAIL_PRIORITY" property="emailPriority" jdbcType="VARCHAR" />
+	<result column="EMAIL_PREF" property="emailPref" jdbcType="VARCHAR" />
+	<result column="COORD_EVENT_CODE1" jdbcType="VARCHAR" property="coordEventCode1"/>	
+	<result column="COORD_EVENT_CODE2" jdbcType="VARCHAR" property="coordEventCode2"/>	
+	<result column="COORD_EVENT_CODE3" jdbcType="VARCHAR" property="coordEventCode3"/>	
+	<result column="COORD_EVENT_CODE4" jdbcType="VARCHAR" property="coordEventCode4"/>	
+	<result column="COORD_EVENT_CODE5" jdbcType="VARCHAR" property="coordEventCode5"/>	
+	<result column="COORD_EVENT_CODE6" jdbcType="VARCHAR" property="coordEventCode6"/>	
+	<result column="COORD_EVENT_CODE7" jdbcType="VARCHAR" property="coordEventCode7"/>	
+	<result column="COORD_EVENT_CODE8" jdbcType="VARCHAR" property="coordEventCode8"/>	
+	<result column="COORD_EVENT_CODE9" jdbcType="VARCHAR" property="coordEventCode9"/>	
+	<result column="COORD_EVENT_CODE10" jdbcType="VARCHAR" property="coordEventCode10"/>	
+	<result column="COORD_EVENT_CODE11" jdbcType="VARCHAR" property="coordEventCode11"/>	
+    <result column="COORD_EVENT_CODE12" jdbcType="VARCHAR" property="coordEventCode12"/>		    
+ 
+  
+  </resultMap>
+  
+   <select id="getMedicaidEligibleCases" parameterType="java.lang.Integer" resultMap="EtlLEligibilityResult">
+		SELECT 
+		/*+ INDEX (e etl_l_eligibility_idx1) */ 
+		<include refid="selectClause"/>
+		FROM
+			eb.ETL_L_ELIGIBILITY ele
+		WHERE
+			ele.JOB_ID = #{jobId}
+	</select>
+	
+	<select id="eligRecords" resultMap="EtlLEligibilityResult">
+		SELECT 
+		/*+ INDEX (e etl_l_eligibility_idx1) */ 
+		<include refid="selectClause"/>
+		FROM
+			ETL_L_ELIGIBILITY ele
+		WHERE
+			ele.JOB_ID = #{jobid}
+			and ele.row_num <![CDATA[>]]> #{low}
+			and ele.row_num <![CDATA[<=]]> #{high}
+	</select>
+	
+	  <sql id="selectClause">
+  	JOB_ID, REPROCESSED_JOB_ID, ROW_NUM, MATCH_CASE_ID, MATCH_CLIENT_ID, NEW_CASE_ID, NEW_CLIENT_ID, STATUS,
+      TO_BE_PROCESSED_ROW_NUM, CLIENT_NBR, ALIAS_FLAG, REAL_CLIENT_NBR, CLIENT_NAME, SSN, SSCN, SEX,
+      RACE, BIRTH_DATE, CERTIFICATION_DATE, ALIEN_DATE, CASE_NBR, EDG_NAME,
+      TIERS_CASE_NUM, HOH_NAME, GUARDIAN_NAME, PAYEE_CD, MAIL_ADDR_LINE_1, MAIL_ADDR_LINE_2,
+      MAIL_CITY, MAIL_STATE, MAIL_ZIP, ZIP_PLUS_FOUR, CARRIER_CODE, COUNTY, PART_A, HOSPICE_FLAG,
+      VENDOR_DRUG_DT_9, DENTAL_DT_9, PART_A_CLOSE_DT_9, WPHONE_NBR, HPHONE_NBR, CPHONE_NBR,
+      EMAIL_ADDR, STATUS_IN_GROUP, PROVIDER_INFO_OCCURS, PROVIDER_NUM1, PROVIDER_ACTIVITY_TYPE1,
+      PROV_BEGIN_DT1, PROV_END_DT1, PROVIDER_NUM2, PROVIDER_ACTIVITY_TYPE2, PROV_BEGIN_DT2,
+      PROV_END_DT2, PROVIDER_NUM3, PROVIDER_ACTIVITY_TYPE3, PROV_BEGIN_DT3, PROV_END_DT3,
+      PROVIDER_NUM4, PROVIDER_ACTIVITY_TYPE4, PROV_BEGIN_DT4, PROV_END_DT4, PROVIDER_NUM5,
+      PROVIDER_ACTIVITY_TYPE5, PROV_BEGIN_DT5, PROV_END_DT5, PROVIDER_NUM6, PROVIDER_ACTIVITY_TYPE6,
+      PROV_BEGIN_DT6, PROV_END_DT6, PROVIDER_NUM7, PROVIDER_ACTIVITY_TYPE7, PROV_BEGIN_DT7,
+      PROV_END_DT7, PROVIDER_NUM8, PROVIDER_ACTIVITY_TYPE8, PROV_BEGIN_DT8, PROV_END_DT8,
+      PROVIDER_NUM9, PROVIDER_ACTIVITY_TYPE9, PROV_BEGIN_DT9, PROV_END_DT9, PROVIDER_NUM10,
+      PROVIDER_ACTIVITY_TYPE10, PROV_BEGIN_DT10, PROV_END_DT10, MEDICARE_B_OCCURS, MEDICARE_B_TYPE1,
+      MEDICARE_B_FROM1, MEDICARE_B_TO1, MEDICARE_B_TYPE2, MEDICARE_B_FROM2, MEDICARE_B_TO2,
+      MEDICARE_B_TYPE3, MEDICARE_B_FROM3, MEDICARE_B_TO3, MEDICARE_B_TYPE4, MEDICARE_B_FROM4,
+      MEDICARE_B_TO4, MEDICARE_B_TYPE5, MEDICARE_B_FROM5, MEDICARE_B_TO5, MEDICARE_FROM,
+      MEDICARE_THRU, PA_REVIEW_DT, PA_PACKET_REC_DT, PA_PARENT_NBR, LANG,
+      EXPECT_DELIVER_DT, RES_ADDR_LINE_1, RES_ADDR_LINE_2, RES_CITY, RES_STATE, RES_ZIP,
+      RES_ZIPFOUR, CAND_PROG_OCCURS, CAND_CANDIDATE_FLAG1, CAND_PROGRAM1, CAND_COUNTY1,
+      CAND_COORD_FROM1, CAND_COORD_TO1, CAND_STATUS_CODE1, CAND_WAIVER_TOA1, CAND_HC_WAIVER_TOA1,
+      CAND_CANDIDATE_FLAG2, CAND_PROGRAM2, CAND_COUNTY2, CAND_COORD_FROM2, CAND_COORD_TO2,
+      CAND_STATUS_CODE2, CAND_WAIVER_TOA2, CAND_HC_WAIVER_TOA2, COORD_OCCURS, COORD_PROGRAM1,
+      COORD_CONTRACTOR1, COORD_COUNTY1, COORD_PLAN1, COORD_FROM1, COORD_TO1, COORD_STATUS_CODE1,
+      COORD_VOLUNTARY_SW1, COORD_WAIVER_TOA1, COORD_HC_WAIVER_TOA1, COORD_PROGRAM2,
+      COORD_CONTRACTOR2, COORD_COUNTY2, COORD_PLAN2, COORD_FROM2, COORD_TO2, COORD_STATUS_CODE2,
+      COORD_VOLUNTARY_SW2, COORD_WAIVER_TOA2, COORD_HC_WAIVER_TOA2, COORD_PROGRAM3,
+      COORD_CONTRACTOR3, COORD_COUNTY3, COORD_PLAN3, COORD_FROM3, COORD_TO3, COORD_STATUS_CODE3,
+      COORD_VOLUNTARY_SW3, COORD_WAIVER_TOA3, COORD_HC_WAIVER_TOA3, COORD_PROGRAM4,
+      COORD_CONTRACTOR4, COORD_COUNTY4, COORD_PLAN4, COORD_FROM4, COORD_TO4, COORD_STATUS_CODE4,
+      COORD_VOLUNTARY_SW4, COORD_WAIVER_TOA4, COORD_HC_WAIVER_TOA4, COORD_PROGRAM5,
+      COORD_CONTRACTOR5, COORD_COUNTY5, COORD_PLAN5, COORD_FROM5, COORD_TO5, COORD_STATUS_CODE5,
+      COORD_VOLUNTARY_SW5, COORD_WAIVER_TOA5, COORD_HC_WAIVER_TOA5, COORD_PROGRAM6,
+      COORD_CONTRACTOR6, COORD_COUNTY6, COORD_PLAN6, COORD_FROM6, COORD_TO6, COORD_STATUS_CODE6,
+      COORD_VOLUNTARY_SW6, COORD_WAIVER_TOA6, COORD_HC_WAIVER_TOA6, COORD_PROGRAM7,
+      COORD_CONTRACTOR7, COORD_COUNTY7, COORD_PLAN7, COORD_FROM7, COORD_TO7, COORD_STATUS_CODE7,
+      COORD_VOLUNTARY_SW7, COORD_WAIVER_TOA7, COORD_HC_WAIVER_TOA7, COORD_PROGRAM8,
+      COORD_CONTRACTOR8, COORD_COUNTY8, COORD_PLAN8, COORD_FROM8, COORD_TO8, COORD_STATUS_CODE8,
+      COORD_VOLUNTARY_SW8, COORD_WAIVER_TOA8, COORD_HC_WAIVER_TOA8, COORD_PROGRAM9,
+      COORD_CONTRACTOR9, COORD_COUNTY9, COORD_PLAN9, COORD_FROM9, COORD_TO9, COORD_STATUS_CODE9,
+      COORD_VOLUNTARY_SW9, COORD_WAIVER_TOA9, COORD_HC_WAIVER_TOA9, COORD_PROGRAM10,
+      COORD_CONTRACTOR10, COORD_COUNTY10, COORD_PLAN10, COORD_FROM10, COORD_TO10,
+      COORD_STATUS_CODE10, COORD_VOLUNTARY_SW10, COORD_WAIVER_TOA10, COORD_HC_WAIVER_TOA10,
+      COORD_PROGRAM11, COORD_CONTRACTOR11, COORD_COUNTY11, COORD_PLAN11, COORD_FROM11, COORD_TO11,
+      COORD_STATUS_CODE11, COORD_VOLUNTARY_SW11, COORD_WAIVER_TOA11, COORD_HC_WAIVER_TOA11,
+      COORD_PROGRAM12, COORD_CONTRACTOR12, COORD_COUNTY12, COORD_PLAN12, COORD_FROM12, COORD_TO12,
+      COORD_STATUS_CODE12, COORD_VOLUNTARY_SW12, COORD_WAIVER_TOA12, COORD_HC_WAIVER_TOA12,
+      MED_OCCURS, MED_CATEGORY1, MED_COVERAGE_CODE1, MED_TYPE_PROGRAM1, MED_TIERS_TOA1, MED_BP1,
+      MED_FROM_DATE1, MED_THRU_DATE1, MED_SPEND_DOWN1, MED_SUPPRESSED_SSI1, MED_CATEGORY2, MED_COVERAGE_CODE2,
+      MED_TYPE_PROGRAM2, MED_TIERS_TOA2, MED_BP2, MED_FROM_DATE2, MED_THRU_DATE2, MED_SPEND_DOWN2, MED_SUPPRESSED_SSI2, 
+      MED_CATEGORY3, MED_COVERAGE_CODE3, MED_TYPE_PROGRAM3, MED_TIERS_TOA3, MED_BP3, MED_FROM_DATE3,
+      MED_THRU_DATE3, MED_SPEND_DOWN3, MED_SUPPRESSED_SSI3, MED_CATEGORY4, MED_COVERAGE_CODE4, MED_TYPE_PROGRAM4,
+      MED_TIERS_TOA4, MED_BP4, MED_FROM_DATE4, MED_THRU_DATE4, MED_SPEND_DOWN4, MED_SUPPRESSED_SSI4, MED_CATEGORY5,
+      MED_COVERAGE_CODE5, MED_TYPE_PROGRAM5, MED_TIERS_TOA5, MED_BP5, MED_FROM_DATE5,
+      MED_THRU_DATE5, MED_SPEND_DOWN5, MED_SUPPRESSED_SSI5, MED_CATEGORY6, MED_COVERAGE_CODE6, MED_TYPE_PROGRAM6,
+      MED_TIERS_TOA6, MED_BP6, MED_FROM_DATE6, MED_THRU_DATE6, MED_SPEND_DOWN6, MED_SUPPRESSED_SSI6, MED_CATEGORY7,
+      MED_COVERAGE_CODE7, MED_TYPE_PROGRAM7, MED_TIERS_TOA7, MED_BP7, MED_FROM_DATE7,
+      MED_THRU_DATE7, MED_SPEND_DOWN7, MED_SUPPRESSED_SSI7, MED_CATEGORY8, MED_COVERAGE_CODE8, MED_TYPE_PROGRAM8,
+      MED_TIERS_TOA8, MED_BP8, MED_FROM_DATE8, MED_THRU_DATE8, MED_SPEND_DOWN8, MED_SUPPRESSED_SSI8, MED_CATEGORY9,
+      MED_COVERAGE_CODE9, MED_TYPE_PROGRAM9, MED_TIERS_TOA9, MED_BP9, MED_FROM_DATE9,
+      MED_THRU_DATE9, MED_SPEND_DOWN9, MED_SUPPRESSED_SSI9, MED_CATEGORY10, MED_COVERAGE_CODE10, MED_TYPE_PROGRAM10,
+      MED_TIERS_TOA10, MED_BP10, MED_FROM_DATE10, MED_THRU_DATE10, MED_SPEND_DOWN10, MED_SUPPRESSED_SSI10, MED_CATEGORY11,
+      MED_COVERAGE_CODE11, MED_TYPE_PROGRAM11, MED_TIERS_TOA11, MED_BP11, MED_FROM_DATE11,
+      MED_THRU_DATE11, MED_SPEND_DOWN11, MED_SUPPRESSED_SSI11, MED_CATEGORY12, MED_COVERAGE_CODE12, MED_TYPE_PROGRAM12,
+      MED_TIERS_TOA12, MED_BP12, MED_FROM_DATE12, MED_THRU_DATE12, MED_SPEND_DOWN12, MED_SUPPRESSED_SSI12, MT_DEATH_DT,
+      MT_SCREEN_DT, CLIENTS_RELATION_TO_HOH, FILENAME, FILEPREFIX, RECORDCONTENT,
+      RECORDCONTENT_HASH, STAGE2_FLAG, DEMOGRAPHIC_HASH, DEMOGRAPHIC_CHANGE_IND, ELIGIBILITY_HASH,
+      ELIGIBILITY_CHANGE_IND, ENROLLMENT_HASH, ENROLLMENT_CHANGE_IND, PROCESS_TS, ERROR_TEXT, MBI,
+      FUTURE_CAND_OCCURS,
+      FUTURE_CAND_CANDIDATE_FLAG1,FUTURE_CAND_PROGRAM1,FUTURE_CAND_COUNTY1,FUTURE_CAND_COORD_FROM1,
+      FUTURE_CAND_COORD_TO1,FUTURE_CAND_STATUS_CODE1,FUTURE_CAND_WAIVER_TOA1,FUTURE_CAND_HC_WAIVER_TOA1, 
+      FUTURE_CAND_CANDIDATE_FLAG2,FUTURE_CAND_PROGRAM2,FUTURE_CAND_COUNTY2,FUTURE_CAND_COORD_FROM2, 
+      FUTURE_CAND_COORD_TO2,FUTURE_CAND_STATUS_CODE2,FUTURE_CAND_WAIVER_TOA2,FUTURE_CAND_HC_WAIVER_TOA2,
+      CLIENT_PREFIX_NAME, CLIENT_FIRST_NAME, CLIENT_MID_NAME, CLIENT_LAST_NAME, CLIENT_SUFX_NAME, 
+      EDG_PREFIX_NAME, EDG_FIRST_NAME, EDG_MID_NAME, EDG_LAST_NAME, EDG_SUFX_NAME, 
+      HOH_PREFIX_NAME, HOH_FIRST_NAME, HOH_MID_NAME, HOH_LAST_NAME, HOH_SUFX_NAME, 
+      GUARDIAN_PREFIX_NAME, GUARDIAN_FIRST_NAME, GUARDIAN_MID_NAME, GUARDIAN_LAST_NAME, GUARDIAN_SUFX_NAME, 
+      MAIL_ADDR_ST_NUM, MAIL_ADDR_ST_NUM_FRAC, MAIL_ADDR_ST_DIR, MAIL_ADDR_ST_NAME, MAIL_ADDR_ST_TYPE, MAIL_ADDR_DWELLING_TYPE_CD, MAIL_ADDR_APT_NUM, MAIL_ADDR_LINE, 
+      RES_ADDR_ST_NUM, RES_ADDR_ST_NUM_FRAC, RES_ADDR_ST_DIR, RES_ADDR_ST_NAME, RES_ADDR_ST_TYPE, RES_ADDR_DWELLING_TYPE_CD, RES_ADDR_APT_NUM, RES_ADDR_LINE,
+	  FIRST_PREG, PREF_LANG, PHONE_PRIORITY, PHONE_PREF, TEXT_PRIORITY, TEXT_PHONE_PREF, EMAIL_PRIORITY ,EMAIL_PREF,
+	  COORD_EVENT_CODE1,COORD_EVENT_CODE2,COORD_EVENT_CODE3,COORD_EVENT_CODE4,COORD_EVENT_CODE5,COORD_EVENT_CODE6,
+      COORD_EVENT_CODE7,COORD_EVENT_CODE8,COORD_EVENT_CODE9,COORD_EVENT_CODE10,COORD_EVENT_CODE11,COORD_EVENT_CODE12
+  
+  </sql>
+  
+
+</mapper>

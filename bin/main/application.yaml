@@ -1,0 +1,7 @@
+spring:
+ datasource:
+  hikari:
+   maximumPoolSize=40
+mybatis:
+  type-aliases-package:com.hash.p79.domain
+
